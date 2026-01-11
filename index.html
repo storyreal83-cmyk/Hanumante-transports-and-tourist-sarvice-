@@ -1,114 +1,331 @@
-<header class="hanuman-banner">
-  <div class="banner-overlay">
-    <h1>🚩 Hanumante Transports & Tourist Service 🚩</h1>
-    <p>Jai Bajrang Bali | All India Transport & Tourist Solutions</p>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanumante Transports & Tourist Service</title>
 
 <style>
-.hanuman-banner{
-  height:320px;
-  background:linear-gradient(135deg,#7a0a0a,#ff9933);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+:root{
+  --primary:#0b3c5d;
+  --secondary:#ff9800;
+  --light:#f4f7fb;
+  --dark:#222;
 }
-.banner-overlay{
-  background:rgba(0,0,0,0.55);
-  padding:30px 40px;
-  border-radius:16px;
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:linear-gradient(180deg,#eef3f9,#ffffff);
+  color:var(--dark);
+}
+
+/* HEADER */
+header{
+  position:relative;
+  background:url('hanuman-banner.jpg') center/cover no-repeat;
+  padding:100px 20px;
+  text-align:center;
   color:#fff;
 }
-.banner-overlay h1{
-  font-size:32px;
-  margin:0;
+
+header::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(11,60,93,0.75);
 }
-.banner-overlay p{
-  margin-top:10px;
+
+.header-content{
+  position:relative;
+  z-index:2;
+}
+
+.header-content h1{
+  font-size:40px;
+  margin-bottom:15px;
+  padding:12px 28px;
+  display:inline-block;
+  border-radius:12px;
+  background:rgba(0,0,0,0.45);
+}
+
+.header-content p{
   font-size:18px;
-  color:#ffd700;
+  padding:10px 24px;
+  display:inline-block;
+  border-radius:12px;
+  background:rgba(0,0,0,0.45);
+}
+
+/* NAVBAR */
+nav{
+  background:#06293f;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:22px;
+  padding:14px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--secondary);
+}
+
+/* CONTAINER */
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:25px;
+}
+
+/* SECTIONS */
+section{
+  background:#fff;
+  margin-top:30px;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+section h2{
+  color:var(--primary);
+  margin-top:0;
+}
+
+section h2::after{
+  content:'';
+  width:60px;
+  height:4px;
+  background:var(--secondary);
+  display:block;
+  margin-top:8px;
+  border-radius:2px;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:var(--light);
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card h3{
+  color:var(--primary);
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  background:var(--secondary);
+  color:#fff;
+  padding:12px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
+}
+
+.btn:hover{background:#e68900;}
+
+/* FOOTER */
+footer{
+  background:#06293f;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-box{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:999;
+}
+
+.whatsapp-box a{
+  background:#25D366;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* SERVICE PHOTOS / GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* LIGHTBOX */
+#lightbox{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+
+#lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
 }
 </style>
+</head>
 
+<body>
 
-<!-- HEADER WITH HANUMAN JI BANNER --
-</header>
-<header class="hanuman-banner">
-  <div class="banner-overlay">
-    <h1>🚩 Hanumante Transports & Tourist Service 🚩</h1>
-    <p>Jai Bajrang Bali | All India Transport & Tourist Solutions</p>
+<header>
+  <div class="header-content">
+    <h1>🚩 Hanumante Transports & Tourist Service 🚩</h1><br><br>
+    <p>All India Transport • Tourist • Logistics Solutions</p>
   </div>
 </header>
-
-<style>
-.hanuman-banner{
-  height:320px;
-  background:linear-gradient(135deg,#7a0a0a,#ff9933);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.banner-overlay{
-  background:rgba(0,0,0,0.55);
-  padding:30px 40px;
-  border-radius:16px;
-  color:#fff;
-}
-.banner-overlay h1{
-  font-size:32px;
-  margin:0;
-}
-.banner-overlay p{
-  margin-top:10px;
-  font-size:18px;
-  color:#ffd700;
-}
-</style>
 
 <nav>
   <a href="#home">Home</a>
   <a href="#services">Services</a>
-  <a href="#reviews">Reviews</a>
   <a href="#vehicles">Vehicles</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#reviews">Reviews</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-  <!-- HOME -->
-  <section id="home" class="hero">
-                             <h2>Reliable Transport & Tourist Services Across India</h2>
-    <p>We provide cars, tourist buses, trucks, loaders and all types of transport services across India with safety, affordability and trust.</p>
-    <div style="margin-top:20px;">
-      <a href="tel:9027043168" style="background:#0b3c5d;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;margin-right:10px;">📞 Call Now</a>
-      <a href="https://wa.me/919027043168" style="background:#25D366;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;">💬 WhatsApp Booking</a>
-    </div>
-  </section>
+<section id="home">
+  <h2>Trusted Transport Partner Across India</h2>
+  <p>
+    Cars, Tourist Buses, Tempo Traveller, Trucks & Loaders with experienced drivers & transparent pricing.
+  </p>
+  <a href="tel:9027043168" class="btn">Call Now: 9027043168</a>
+  <a href="tel:7042523244" class="btn">Call Now: 7042523244</a>
+  <a href="tel:7838284010" class="btn">Call Now: 7838284010</a>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <h2 style="margin-top:40px;">Our Services</h2>
-    <div class="services">
-      <div class="card"><h3>Car & Taxi Service</h3><p>Local & outstation travel.</p></div>
-      <div class="card"><h3>Tourist Bus</h3><p>Group tours & family trips.</p></div>
-      <div class="card"><h3>Truck & Loader</h3><p>Safe goods transportation.</p></div>
-      <div class="card"><h3>All India Service</h3><p>Nationwide coverage.</p></div>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Car Transport</h3>
+      <p>Reliable car transport across India at best prices.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Tourist Buses</h3>
+      <p>Comfortable tourist buses for all kinds of trips.</p>
+    </div>
+    <div class="card">
+      <h3>Tempo Traveller</h3>
+      <p>Spacious Tempo Travellers for family & group travel.</p>
+    </div>
+    <div class="card">
+      <h3>Trucks & Loaders</h3>
+      <p>Efficient cargo transport solutions with trained staff.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="contact-box">
-    <h2>Why Choose Us</h2>
-    <ul style="line-height:1.8;">
-      <li>✔ 24x7 All India Service</li>
-      <li>✔ Experienced & Verified Drivers</li>
-      <li>✔ Clean & Well-Maintained Vehicles</li>
-      <li>✔ Affordable & Transparent Pricing</li>
-      <li>✔ On-Time Pickup & Delivery</li>
-    </ul>
-  </section>
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="service1.jpg" alt="Service 1">
+    <img src="service2.jpg" alt="Service 2">
+    <img src="service3.jpg" alt="Service 3">
+    <img src="service4.jpg" alt="Service 4">
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <p>"Excellent service and friendly drivers!" – Manish M.</p>
+  <p>"Reliable transport, on time every time." – Bharat R.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📞 9027043168 / 7042523244 / 7838284010</p>
+  <p>✉️ Email: sharmatarun8436@gmail.com / bharatrajput819@gmail.com</p>
+</section>
+
+</div>
+
+<footer>
+  &copy; 2026 Hanumante Transports & Tourist Service. All Rights Reserved.
+</footer>
+
+<!-- WhatsApp Buttons -->
+<div class="whatsapp-box">
+  <a href="https://wa.me/9027043168" target="_blank">WhatsApp: Manish</a>
+  <a href="https://wa.me/7042523244" target="_blank">WhatsApp: Bharat</a>
+  <a href="https://wa.me/7838284010" target="_blank">WhatsApp: Tarun</a>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <img src="" alt="Expanded Image">
+</div>
+
+<script>
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', ()=>{
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+lightbox.addEventListener('click', ()=>{ lightbox.style.display = 'none'; });
+</script>
+
+</body>
+</html>
 
   <!-- VEHICLES -->
   <section id="vehicles" class="contact-box">
