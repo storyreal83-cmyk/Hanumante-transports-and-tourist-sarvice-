@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanumante Transport & Tourist Service</title>
+  <meta name="description" content="Hanumante Transport & Tourist Service – All India transport, tourist bus, car rental, tempo, loader services." />
+
+  <style>
+    :root{
+      --primary:#0b3c5d;
+      --secondary:#d9b310;
+      --light:#f4f6f8;
+      --dark:#222;
+    }
+    *{box-sizing:border-box; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;}
+    body{background:var(--light); color:var(--dark); line-height:1.6;}
+
+    header{
+      background:linear-gradient(135deg,var(--primary),#092c44);
+      color:#fff;
+      padding:20px 15px;
+      text-align:center;
+    }
+    header h1{font-size:24px; margin-bottom:5px;}
+    header p{font-size:14px; opacity:0.9;}
+
+    nav{
+      background:#fff;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav ul{list-style:none; display:flex; flex-wrap:wrap; justify-content:center;}
+    nav ul li a{
+      display:block;
+      padding:12px 16px;
+      text-decoration:none;
+      color:var(--primary);
+      font-weight:bold;
+    }
+    nav ul li a:hover{background:var(--secondary); color:#000;}
+
+    section{padding:30px 15px; max-width:1100px; margin:auto;}
+    section h2{color:var(--primary); margin-bottom:15px; font-size:22px;}
+
+    .about p{margin-bottom:10px;}
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:15px;
+    }
+    .service-box{
+      background:#fff;
+      border-radius:10px;
+      padding:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+    .service-box h3{margin-bottom:8px; color:var(--primary);}
+
+    .contact{
+      background:#fff;
+      border-radius:10px;
+      padding:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+    .contact p{margin-bottom:8px;}
+
+    .managers{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:15px;
+    }
+    .manager{
+      background:#fff;
+      padding:15px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:15px;
+      bottom:15px;
+      background:#25D366;
+      color:#fff;
+      padding:12px 18px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    footer{
+      background:#111;
+      color:#ccc;
+      text-align:center;
+      padding:15px;
+      margin-top:30px;
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+
+<header id="home">
+  <div class="hero-slider">
+    <div class="slide active" style="background-image:url('bus.jpg')">🚌 Tourist Bus Service – All India</div>
+    <div class="slide" style="background-image:url('car.jpg')">🚗 Car & Taxi Service – 24×7</div>
+    <div class="slide" style="background-image:url('tempo.jpg')">🚐 Tempo Traveller – Group Tours</div>
+    <div class="slide" style="background-image:url('truck.jpg')">🚚 Truck & Loader – Goods Transport</div>
+  </div>
+  <h1>Hanumante Transport & Tourist Service</h1>
+  <p>Jai Bajrang Bali | 24×7 All India Transport & Tourist Services</p>
+</header>
+
+<style>
+.hero-slider{height:260px;border-radius:12px;overflow:hidden;margin-bottom:15px;position:relative}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:bold;color:#fff;background-size:cover;background-position:center;opacity:0;transition:opacity 1s}
+.slide::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.slide{z-index:1}
+.slide.active{opacity:1}
+.slide span, .slide{z-index:2}
+</style>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let index=0;
+setInterval(()=>{
+  slides[index].classList.remove('active');
+  index=(index+1)%slides.length;
+  slides[index].classList.add('active');
+},3000);
+</script>
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#vehicle">Vehicle Need Form</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>
+    Hanumante Transport & Tourist Service ek bharosemand aur professional transport company hai jo poore India me
+    apni services provide karti hai. Hum tourist aur commercial dono tarah ke transport solutions dete hain.
+  </p>
+  <p>
+    Hamara uddeshya safe, comfortable aur time par service dena hai, chahe aapko tourist bus chahiye ho ya
+    commercial loading vehicle.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services (24×7 All India Available)</h2>
+  <p style="margin-bottom:20px;">Hanumante Transport & Tourist Service poore India me 24×7 safe, reliable aur affordable transport solutions provide karta hai.</p>
+
+  <div class="services">
+
+    <div class="service-box">
+      <img src="car.jpg" alt="Car & Taxi Service" style="width:100%;border-radius:8px;margin-bottom:10px;">
+      <h3>Car & Taxi Service</h3>
+      <p>Local, outstation, airport transfer, sedan & SUV cars with driver.</p>
+      <a href="tel:7042523244" style="font-weight:bold;color:#0b3c5d;">📞 Call Now</a>
+    </div>
+
+    <div class="service-box">
+      <img src="bus.jpg" alt="Tourist Bus Service" style="width:100%;border-radius:8px;margin-bottom:10px;">
+      <h3>Tourist Bus Service</h3>
+      <p>AC / Non-AC luxury tourist buses for tours, schools & corporate trips.</p>
+      <a href="tel:9027043168" style="font-weight:bold;color:#0b3c5d;">📞 Call Now</a>
+    </div>
+
+    <div class="service-box">
+      <img src="tempo.jpg" alt="Tempo Traveller" style="width:100%;border-radius:8px;margin-bottom:10px;">
+      <h3>Tempo Traveller</h3>
+      <p>Family tours, group travel, office trips & wedding transport.</p>
+      <a href="tel:7838284010" style="font-weight:bold;color:#0b3c5d;">📞 Call Now</a>
+    </div>
+
+    <div class="service-box">
+      <img src="truck.jpg" alt="Truck Transport" style="width:100%;border-radius:8px;margin-bottom:10px;">
+      <h3>Truck Transport</h3>
+      <p>Commercial goods transport – full load & part load services.</p>
+      <a href="tel:9027043168" style="font-weight:bold;color:#0b3c5d;">📞 Call Now</a>
+    </div>
+
+    <div class="service-box">
+      <img src="loader.jpg" alt="Loader Service" style="width:100%;border-radius:8px;margin-bottom:10px;">
+      <h3>Loader & Pickup Service</h3>
+      <p>Small & medium goods delivery, house shifting support.</p>
+      <a href="tel:7042523244" style="font-weight:bold;color:#0b3c5d;">📞 Call Now</a>
+    </div>
+
+    <div class="service-box">
+      <img src="allindia.jpg" alt="All India Transport" style="width:100%;border-radius:8px;margin-bottom:10px;">
+      <h3>All India Transport</h3>
+      <p>Nationwide transport & tourist services with trusted network.</p>
+      <a href="tel:7838284010" style="font-weight:bold;color:#0b3c5d;">📞 Call Now</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="management">
+  <h2>Management Team</h2>
+  <div class="managers">
+    <div class="manager">
+      <strong>Manager:</strong>
+      <p>Manish Mishra</p>
+      <p>📞 7042523244</p>
+    </div>
+    <div class="manager">
+      <strong>Manager:</strong>
+      <p>Tarun Sharma</p>
+      <p>📞 7838284010</p>
+    </div>
+    <div class="manager">
+      <strong>Advisor:</strong>
+      <p>Bharat Rajput</p>
+      <p>📞 9027043168</p>
+    </div>
+  </div>
+</section>
+
+<section id="vehicle">
+  <h2>Book Your Vehicle / Get a Quick Quote</h2>
+  <p style="margin-bottom:15px;">Apni travel ya transport requirement hume batayein. Hamari team aapse turant contact karegi aur best possible rate & service provide karegi.</p>
+  <form action="mailto:sharmatarun8436@gmail.com,bharatrajput819@gmail.com" method="post" enctype="text/plain">
+      <p><input type="text" name="Name" placeholder="Full Name" required style="width:100%;padding:10px;margin-bottom:10px;"></p>
+      <p><input type="tel" name="Mobile" placeholder="Mobile Number" required style="width:100%;padding:10px;margin-bottom:10px;"></p>
+      <p><input type="email" name="Email" placeholder="Email Address" style="width:100%;padding:10px;margin-bottom:10px;"></p>
+      <p>
+        <select name="Vehicle" required style="width:100%;padding:10px;margin-bottom:10px;">
+          <option value="">Select Vehicle Type</option>
+          <option>Car / Taxi</option>
+          <option>Tourist Bus</option>
+          <option>Tempo Traveller</option>
+          <option>Truck</option>
+          <option>Loader / Pickup</option>
+        </select>
+      </p>
+      <p><textarea name="Details" placeholder="Journey details, pickup-drop location, date or goods information" style="width:100%;padding:10px;margin-bottom:10px;"></textarea></p>
+      <button type="submit" style="padding:12px 22px;background:#0b3c5d;color:#fff;border:none;border-radius:6px;font-size:15px;margin-right:10px;">Submit via Email</button>
+      <button type="button" onclick="sendWhatsApp()" style="padding:12px 22px;background:#25D366;color:#fff;border:none;border-radius:6px;font-size:15px;">Submit via WhatsApp</button>
+
+<script>
+function sendWhatsApp(){
+  var name=document.querySelector('input[name=Name]').value;
+  var mobile=document.querySelector('input[name=Mobile]').value;
+  var email=document.querySelector('input[name=Email]').value;
+  var vehicle=document.querySelector('select[name=Vehicle]').value;
+  var details=document.querySelector('textarea[name=Details]').value;
+
+  var text='New Vehicle Booking Request%0A'
+    +'Name: '+name+'%0A'
+    +'Mobile: '+mobile+'%0A'
+    +'Email: '+email+'%0A'
+    +'Vehicle: '+vehicle+'%0A'
+    +'Details: '+details;
+
+  window.open('https://wa.me/919027043168?text='+text,'_blank');
+}
+</script>
+  </form>
+  </div>
+</section>
+
+<section class="contact-box">
+  <h2>Why Choose Us</h2>
+  <ul style="line-height:1.8;">
+    <li>✔ 24×7 All India Transport Service</li>
+    <li>✔ Experienced & Verified Drivers</li>
+    <li>✔ Clean & Well-Maintained Vehicles</li>
+    <li>✔ Affordable & Transparent Pricing</li>
+    <li>✔ On-Time Pickup & Delivery</li>
+  </ul>
+</section>
+
+<section class="contact-box">
+  <h2>Customer Reviews</h2>
+  <p>⭐⭐⭐⭐⭐ <strong>5/5 Rating</strong></p>
+  <p>"Reliable, professional and on-time service."</p>
+  <p>
+    <a href="https://www.google.com/search?q=Hanumante+Transports+and+Tourist+Service+reviews" target="_blank" style="font-weight:bold;color:#0b3c5d;">⭐ Write a Google Review</a>
+  </p>
+</section>
+
+<section class="contact-box">
+  <h2>Service Gallery</h2>
+  <p>Our vehicles & service photos (clickable)</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+    <a href="bus.jpg"><img src="bus.jpg" style="width:100%;border-radius:8px;"></a>
+    <a href="car.jpg"><img src="car.jpg" style="width:100%;border-radius:8px;"></a>
+    <a href="truck.jpg"><img src="truck.jpg" style="width:100%;border-radius:8px;"></a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact & Location</h2>
+  <div class="contact">
+    <p><strong>Company:</strong> Hanumante Transport & Tourist Service</p>
+    <p><strong>Availability:</strong> 24 × 7 Service Available</p>
+    <p><strong>Call / WhatsApp:</strong> 9027043168 | 7042523244 | 7838284010</p>
+    <p><strong>Email:</strong> sharmatarun8436@gmail.com</p>
+    <p><strong>Service Area:</strong> All India</p>
+
+    <iframe src="https://www.google.com/maps?q=F-133%20Ved%20Vihar%20Loni%20Ghaziabad%20Uttar%20Pradesh%20India&output=embed" width="100%" height="300" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919027043168" target="_blank">WhatsApp Bharat</a>
+<a class="whatsapp" style="bottom:70px;" href="https://wa.me/917042523244" target="_blank">WhatsApp Manish</a>
+<a class="whatsapp" style="bottom:125px;" href="https://wa.me/917838284010" target="_blank">WhatsApp Tarun</a>
+
+<footer>
+  <p>© 2026 Hanumante Transport & Tourist Service. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
